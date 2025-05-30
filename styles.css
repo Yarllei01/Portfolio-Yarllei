@@ -59,6 +59,9 @@ nav ul li a:hover {
   transition: color 0.3s ease;
 
 }
+.menu-toggle {
+  display: none;
+}
 
 section {
   padding: 80px 80px;
@@ -409,7 +412,6 @@ button:hover {
   transition: 0.3s;
 }
 
-@media (max-width: 600px) {
   nav ul {
     display: none;
     flex-direction: column;
@@ -429,7 +431,7 @@ button:hover {
   .menu-toggle {
     display: flex;
   }
-}
+
 
 @media (max-width: 700px) {
   .hero {
@@ -460,12 +462,28 @@ button:hover {
   .home-direita p {
     text-align: center;
   }
+  .home-direita h1 {
+    font-size: 2rem;
+  }
+  .home-direita h2 {
+    font-size: 1.2rem;
+  }
+  .home-direita h3 {
+    font-size: 1rem;
+  }
+  .home-direita p {
+    font-size: 15px;
+  }
 .home-direita .btn,
   .home-direita button {
     display: block;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
+  }
+  .menu-toggle {
+    display: flex;
+    align-items: center;
   }
 }
 @media (max-width: 960px) {
@@ -485,6 +503,25 @@ button:hover {
   .contato-conteudo {
     flex-direction: column;
     gap: 1.5rem;
+  }
+  .contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .contato-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .contato form,
+  .mapa-container {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
   }
 
   .contato form,
