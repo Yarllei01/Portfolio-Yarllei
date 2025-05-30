@@ -16,15 +16,15 @@ a {
   color: inherit;
 }
 
-.logo{
-  color: #FBFBFC;
-  text-align: center;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.2px;
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
 }
 
 nav {
@@ -35,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #342db6; 
+  background-color: #000000; 
   color: #FBFBFC;
   padding: 2rem;
   z-index: 1000;
@@ -53,7 +53,7 @@ nav ul li a {
   font-weight: 600;
 }
 nav ul li a:hover {
-  color: #a8ff07;
+  color: #2F27CE;
   transition: color 0.3s ease;
 
 }
@@ -81,7 +81,7 @@ section {
   align-items: left;
   padding-left: 5rem;
 }
-        img {
+        .home-esquerda img {
           border-radius: 50%;
           max-width: 55%;
         }
@@ -285,9 +285,21 @@ footer {
   color: #FBFBFE;
   text-align: center;
   padding: 1.2rem;
-  font-size: 18px;
+}
+footer img{
+  height: 60px;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+footer h5{
+  font-size: 16px;
   letter-spacing: 2px;
-  
+  margin-bottom: 2rem;
+}
+footer p{
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 button:hover {
