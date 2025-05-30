@@ -281,19 +281,19 @@ input, textarea {
 
 
 footer {
-  background-color: #342db6;
+  background-color: #000000;
   color: #FBFBFE;
   text-align: center;
   padding: 1.2rem;
 }
 footer img{
-  height: 60px;
+  height: 70px;
   width: auto;
   margin-top: 10px;
   margin-bottom: 2rem;
 }
-footer h5{
-  font-size: 16px;
+footer h6{
+  font-size: 12px;
   letter-spacing: 2px;
   margin-bottom: 2rem;
 }
