@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SELECIONE UM CARRO</title>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="text">
+            <h1 id="texto">Selecione a cor do carro</h1>
+            <p id="texto2">Carro selecionado <div id="result">?</div></p>
+        </div>
+    </header>
+    <main>
+        <div id="container" class="container">
+            <div class="track"></div>
+            <div id="white" onclick="branco()"></div>
+            <div id="red" onclick="vermelho()"></div>
+            <audio src="assets/audio/cars.mp3" autoplay></audio>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div class="btn_circle_1" id="branco" onclick="branco()"></div>
+            <div class="btn_circle_2" id="vermelho" onclick="vermelho()"></div>
+            <div class="btn" id="resetar" onclick="resetar()">Resetar</div>
+            <div class="btn" id="acelerar" onclick="acelerar()">Acelerar</div>
+            <div class="btn" id="desacelerar" onclick="desacelerar()">Desacelerar</div>
+        </nav>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
