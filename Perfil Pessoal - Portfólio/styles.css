@@ -31,12 +31,13 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #342db6; 
-  color: #FBFBFC;
-  padding: 1.2rem 2rem;
+  height: 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #342db6; 
+  color: #FBFBFC;
+  padding: 2rem;
   z-index: 1000;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
 }
@@ -44,7 +45,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.2rem;
 }
 
 nav ul li a {
@@ -52,7 +53,7 @@ nav ul li a {
   font-weight: 600;
 }
 nav ul li a:hover {
-  color: #b9b9ee;
+  color: #a8ff07;
   transition: color 0.3s ease;
 
 }
@@ -110,7 +111,7 @@ section {
         }
         .home-direita p {
           color: #050315;
-          font-size: 14px;
+          font-size: 16px;
           text-align: left;
           font-weight: 400;
           line-height: normal;
@@ -283,14 +284,16 @@ footer {
   background-color: #342db6;
   color: #FBFBFE;
   text-align: center;
-  padding: 6rem;
+  padding: 1.2rem;
+  font-size: 18px;
+  letter-spacing: 2px;
   
 }
 
 .btn:hover {
   background-color: #1a1a8c;
   color: #FBFBFE;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 @media (max-width: 960px) {
