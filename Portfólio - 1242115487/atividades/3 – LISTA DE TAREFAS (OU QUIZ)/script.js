@@ -4,11 +4,8 @@
 const questions = [
     { question: "Quem foi o primeiro presidente do Brasil?", options: ["Deodoro da Fonseca", "Getúlio Vargas", "Juscelino Kubitschek", "Pedro II"], answer: 0 },
     { question: "Em que ano ocorreu a Proclamação da República no Brasil?", options: ["1822", "1889", "1945", "1964"], answer: 1 },
-    { question: "Quem descobriu o Brasil?", options: ["Cristóvão Colombo", "Pedro Álvares Cabral", "Vasco da Gama", "Américo Vespúcio"], answer: 1 },
-    { question: "Qual a capital do Brasil?", options: ["Rio de Janeiro", "Brasília", "São Paulo", "Salvador"], answer: 1 },
     { question: "Quem foi o líder da Inconfidência Mineira?", options: ["Tiradentes", "Dom Pedro I", "Zumbi dos Palmares", "Joaquim Nabuco"], answer: 0 },
     { question: "Em que ano começou a Primeira Guerra Mundial?", options: ["1905", "1914", "1939", "1945"], answer: 1 },
-    { question: "Quem foi o primeiro imperador do Brasil?", options: ["Dom Pedro I", "Dom Pedro II", "Getúlio Vargas", "Floriano Peixoto"], answer: 0 },
     { question: "Qual desses países não participou da Segunda Guerra Mundial?", options: ["Brasil", "Japão", "Suíça", "Itália"], answer: 2 }
 ];
 
@@ -35,9 +32,13 @@ function startGame() {
 // Carrega a pergunta atual e exibe as alternativas
 function loadQuestion() {
     const questionObj = questions[currentQuestionIndex];
-    document.getElementById('question-number').innerText = currentQuestionIndex + 1;
+document.getElementById('question-number').innerText = currentQuestionIndex + 1;
     document.getElementById('question-text').innerText = questionObj.question;
-    
+    document.getElementById('feedback').innerText = '';
+    document.getElementById('btn-next').classList.add('hidden');
+    document.getElementById('btn-enviar').classList.remove('hidden'); // Mostra o botão Enviar
+    document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = false);
+
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = '';
     
@@ -64,8 +65,7 @@ function loadQuestion() {
     document.getElementById('feedback').innerText = '';
 }
 
-// Função para avançar para a próxima pergunta
-function nextQuestion() {
+function enviarResposta() {
     const selectedOption = document.querySelector('input[name="option"]:checked');
     if (!selectedOption) {
         alert("Por favor, selecione uma alternativa.");
@@ -79,11 +79,23 @@ function nextQuestion() {
     if (answer === questionObj.answer) {
         correctAnswers++;
         document.getElementById('feedback').innerText = "Resposta correta!";
+        // Desabilita as opções após acertar
+        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
+        // Mostra o botão "Próxima" e esconde o "Enviar"
+        document.getElementById('btn-next').classList.remove('hidden');
+        document.getElementById('btn-enviar').classList.add('hidden');
     } else {
         wrongAnswers++;
-        document.getElementById('feedback').innerText = "Resposta incorreta.";
+        document.getElementById('feedback').innerText = "Resposta incorreta. Tente novamente!";
+        // Permite tentar novamente: mantém as opções habilitadas e o botão "Enviar" visível
+        document.getElementById('btn-next').classList.add('hidden');
+        document.getElementById('btn-enviar').classList.remove('hidden');
+        // Desabilita apenas a opção errada selecionada
+        selectedOption.disabled = true;
     }
+}
 
+function nextQuestion() {
     // Verifica condições de vitória ou derrota
     if (correctAnswers >= 5) {
         endGame(true);

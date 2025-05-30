@@ -19,10 +19,11 @@
 
     <!-- Tela do quiz onde as perguntas serão exibidas -->
     <div id="quiz-screen" class="hidden">
-        <h3>Questão <span id="question-number">1</span> de 8</h3>
+        <h3>Questão <span id="question-number">1</span> de 5</h3>
         <p id="question-text"></p>
         <div id="options-container"></div>
-        <button onclick="nextQuestion()">Próxima</button>
+        <button id="btn-enviar" onclick="enviarResposta()">Enviar</button>
+<button id="btn-next" class="hidden" onclick="nextQuestion()">Próxima</button>
         <p class="feedback" id="feedback"></p>
     </div>
 
