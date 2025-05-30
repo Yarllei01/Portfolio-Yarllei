@@ -240,6 +240,8 @@ section {
 
 .contato {
   background-color: #eaeaff;
+  display: grid;
+  align-items: center;
 }
 
 .contato h2 {
@@ -247,7 +249,13 @@ section {
   margin-bottom: 1.6rem;
   font-size: 2rem;
 }
-
+.contato h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+}
 .contato form {
   max-width: 500px;
   margin: auto;
@@ -278,6 +286,25 @@ input, textarea {
   letter-spacing: 0.14px;
   box-shadow: 0 6px 6px -6px black;
 }
+.contato-conteudo {
+  display: flex;
+  min-height: 350px;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: stretch; /* Garante altura igual */
+}
+
+.contato form,
+.mapa-container {
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 400px;
+  
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+
 
 
 footer {
@@ -327,5 +354,25 @@ button:hover {
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .contato-conteudo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contato form,
+  .mapa-container {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+    height: auto;
+  }
+
+  .mapa-container {
+    aspect-ratio: 1/1;
+    min-height: 300px;
+    margin: 0 auto;
   }
 }
