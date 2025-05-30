@@ -191,9 +191,14 @@ section {
   transition: 0.7s ease;
 }
 .card img {
-  max-width: 100%;
-  border-radius: 6px;
-  padding-bottom: 10px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  max-height: 220px;
+  box-shadow: #000000 0px 0px 4px -2px;
 }
 .card button {
   margin-top: 1rem;
