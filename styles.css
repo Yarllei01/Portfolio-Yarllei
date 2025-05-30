@@ -85,7 +85,11 @@ section {
 }
         .home-esquerda img {
           border-radius: 50%;
-          max-width: 55%;
+          width: 100%;
+          max-width: 320px;
+          height: auto;
+          display: block;
+          object-fit: cover;
         }
 
 .home-direita{
@@ -94,7 +98,7 @@ section {
   padding-right: 5rem;
 }
         .home-direita h1 {
-            font-size: 50px;
+            font-size: 80px;
             font-weight: 700;
             text-align: left;
             line-height: 1.2;
@@ -113,7 +117,7 @@ section {
         }
         .home-direita p {
           color: #050315;
-          font-size: 16px;
+          font-size: 18px;
           text-align: left;
           font-weight: 400;
           line-height: normal;
@@ -141,6 +145,7 @@ section {
 .portfolio {
   background-color: #342db6;
   color: #FBFBFC;
+  padding-top: 60px;
   padding-left: 100px;
   padding-right:100px;
 }
@@ -244,6 +249,20 @@ section {
   width: 100%;
 }
 
+.progressoDiv {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progressoValor {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2F27CE;
+  min-width: 40px;
+  text-align: right;
+}
+
 
 .contato {
   background-color: #eaeaff;
@@ -298,7 +317,7 @@ input, textarea {
   min-height: 350px;
   gap: 2rem;
   justify-content: space-between;
-  align-items: stretch; /* Garante altura igual */
+  align-items: stretch;
 }
 
 .contato form,
@@ -352,8 +371,10 @@ button:hover {
   }
 
   .logo {
+    display: flex;
     margin-bottom: 0.5rem;
     align-items: center;
+    margin-bottom: 0;
     margin-left: 1rem;
   }
 
@@ -376,6 +397,7 @@ button:hover {
   border: none;
   cursor: pointer;
   margin-left: auto;
+  margin-right: 1rem;
 }
 
 .menu-toggle span {
@@ -409,6 +431,43 @@ button:hover {
   }
 }
 
+@media (max-width: 700px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px; 
+    padding-bottom: 40px;
+  }
+  .home-esquerda {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 0; 
+  }
+  .home-esquerda img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .home-direita {
+    padding-right: 0; 
+  }
+  .home-direita h1,
+  .home-direita h2,
+  .home-direita h3,
+  .home-direita p {
+    text-align: center;
+  }
+.home-direita .btn,
+  .home-direita button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+  }
+}
 @media (max-width: 960px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -418,6 +477,7 @@ button:hover {
 @media (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
+    padding: 0;
   }
 }
 

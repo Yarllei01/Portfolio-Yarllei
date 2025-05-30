@@ -17,7 +17,7 @@
 </button>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#home">Sobre</a></li>
+      <li><a href="#home">Sobre Mim</a></li>
       <li><a href="#projects">Projetos</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contato</a></li>
@@ -29,10 +29,10 @@
       <img src="Assets/20221226_120104.jpg" alt="Foto de Yarllei Lima" />
     </div>
     <div class="home-direita">
-    <h3>Olá, eu sou</h3>
-    <h2>Yarllei Lima</h2>
-    <h1>Estudante de<br>Sistemas de Informação</h1>
-    <p>Estudante de Sistemas de Informação e apaixonado por música, sou entusiasta do universo do cinema e um grande fã de futebol. Atualmente, estou focado no desenvolvimento front-end, onde posso unir design e lógica para tentar criar experiências visuais que sejam agradáveis e intuitivas para os usuários</p>
+    <h3>Seja Bem-Vindo!</h3>
+    <h2>Eu sou</h2>
+    <h1>Yarllei Lima</h1>
+    <p>Sou um estudante de Sistemas de Informação aspirante a front-end. Sou um entusiasta da universo do cinema, um grande fã de futebol e um apaixonado por música. Atualmente, estou focado em melhorar no desenvolvimento front-end, onde posso unir design e lógica para tentar criar experiências visuais que sejam agradáveis e intuitivas para os usuários.</p>
     <button class="btn"><a href="#projects">Ver Mais</a></button>
     </div>
   </section>
@@ -104,12 +104,36 @@
  
   <section id="skills" class="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML <progress value="30" max="100"></progress></li>
-      <li>CSS <progress value="35" max="100"></progress></li>
-      <li>JavaScript <progress value="8" max="100"></progress></li>
-      <li>Figma <progress value="30" max="100"></progress></li>
-    </ul>
+    <ul class="skills">
+  <li>
+    <label for="html">HTML</label>
+    <div class="progressoDiv">
+      <progress id="html" value="30" max="100"></progress>
+      <span class="progressoValor">30%</span>
+    </div>
+  </li>
+  <li>
+    <label for="css">CSS</label>
+    <div class="progressoDiv">
+      <progress id="css" value="30" max="100"></progress>
+      <span class="progressoValor">30%</span>
+    </div>
+  </li>
+  <li>
+    <label for="js">JavaScript</label>
+    <div class="progressoDiv">
+      <progress id="js" value="7" max="100"></progress>
+      <span class="progressoValor">7%</span>
+    </div>
+  </li>
+  <li>
+    <label for="react">React</label>
+    <div class="progressoDiv">
+      <progress id="react" value="35" max="100"></progress>
+      <span class="progressoValor">35%</span>
+    </div>
+  </li>
+</ul>
   </section>
 
   
@@ -144,6 +168,6 @@
     <h6>Desenvolvido por Yarllei Lima</h6>
     <p>Yarllei Lima © 2025. Todos os direitos reservados.</p>
   </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
