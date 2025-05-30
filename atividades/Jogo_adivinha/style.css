@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+
+body{
+    background-image: linear-gradient(to top, red, orange);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: 5px solid black;
+    box-shadow: 130px 50px 50px black;
+    padding: 10px;
+    border-radius: 10px;
+}
+h1{
+    color: black;
+}
+
+input{
+    width: 100px;
+    text-align: center;
+}

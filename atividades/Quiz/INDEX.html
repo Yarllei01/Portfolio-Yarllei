@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Conhecimento</title>
+    <!-- Linkando o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Tela inicial para selecionar a categoria e começar o quiz -->
+    <div id="start-screen">
+        <h2>Quiz de Conhecimento</h2>
+        <p>Selecione a categoria e clique para iniciar o jogo:</p>
+        <button onclick="startGame()">História</button>
+    </div>
+
+    <!-- Tela do quiz onde as perguntas serão exibidas -->
+    <div id="quiz-screen" class="hidden">
+        <h3>Questão <span id="question-number">1</span> de 8</h3>
+        <p id="question-text"></p>
+        <div id="options-container"></div>
+        <button onclick="nextQuestion()">Próxima</button>
+        <p class="feedback" id="feedback"></p>
+    </div>
+
+    <!-- Tela de resultado final, exibida quando o jogo termina -->
+    <div id="result-screen" class="hidden">
+        <h2 id="result-message"></h2>
+        <button onclick="restartGame()">Reiniciar</button>
+    </div>
+</div>
+
+<!-- Linkando o arquivo JavaScript externo -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa">
+        <button id="addTaskBtn" onclick="addTask()">Adicionar Tarefa</button>
+        
+        <div class="lists">
+            <div id="taskList1" class="task-list" data-color="#f54242">
+                <div class="list-header">Em Aberto</div>
+                <div class="task-container"></div>
+            </div>
+            <div id="taskList2" class="task-list" data-color="#ff9f1a">
+                <div class="list-header">Bid (Negociação)</div>
+                <div class="task-container"></div>
+            </div>
+            <div id="taskList3" class="task-list" data-color="#4287f5">
+                <div class="list-header">Em Andamento</div>
+                <div class="task-container"></div>
+            </div>
+            <div id="taskList4" class="task-list" data-color="#42f55a">
+                <div class="list-header">Entregue</div>
+                <div class="task-container"></div>
+            </div>
+        </div>
+    </div>
+<script src="script.js" defer></script>
+</body>
+</html>
