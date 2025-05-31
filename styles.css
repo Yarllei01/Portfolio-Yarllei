@@ -1,3 +1,4 @@
+/* RESET E BASE */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   background-color: #FBFBFC;
+  padding-top: 60px;;
 }
 
 a {
@@ -16,19 +18,7 @@ a {
   color: inherit;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 48px;
-  width: auto;
-  max-width: 160px;
-  object-fit: contain;
-  transition: max-width 0.2s, max-height 0.2s;
-}
-
+/* NAVBAR */
 nav {
   position: fixed;
   top: 0;
@@ -44,6 +34,19 @@ nav {
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  transition: max-width 0.2s, max-height 0.2s;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -57,17 +60,38 @@ nav ul li a {
 nav ul li a:hover {
   color: #2F27CE;
   transition: color 0.3s ease;
-
 }
+
+/* MENU HAMBURGUER */
 .menu-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #FBFBFC;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
+/* SECTION BASE */
 section {
   padding: 80px 80px;
   min-height: 40vh;
 }
 
+/* HERO */
 .hero {
   background-color: #FBFBFC;
   display: grid;
@@ -79,56 +103,61 @@ section {
   min-height: 60vh;
 }
 
-.home-esquerda{
+.home-esquerda {
   flex: 1;      
   display: flex;
   justify-content: left;
   align-items: left;
   padding-left: 5rem;
 }
-        .home-esquerda img {
-          border-radius: 50%;
-          width: 100%;
-          max-width: 320px;
-          height: auto;
-          display: block;
-          object-fit: cover;
-        }
+.home-esquerda img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
-.home-direita{
+.home-direita {
   display: grid;
   flex: 1;
   padding-right: 5rem;
 }
-        .home-direita h1 {
-            font-size: 80px;
-            font-weight: 700;
-            text-align: left;
-            line-height: 1.2;
-            margin-bottom: 1.8rem;
-        }
-        .home-direita h2 {
-          color: #2F27CE;
-          font-size: 24px;
-          font-weight:600;
-          text-align: left;
-        }
-        .home-direita h3 {
-          font-size: 18px;
-          text-align: left;
-          
-        }
-        .home-direita p {
-          color: #050315;
-          font-size: 18px;
-          text-align: left;
-          font-weight: 400;
-          line-height: normal;
-          letter-spacing: 0.63px;
-          margin-bottom: 1.5rem;
-          flex-shrink: 0;
-        }
-
+.home-direita h1 {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+.home-direita h2 {
+  color: #2F27CE;
+  font-size: 24px;
+  font-weight:600;
+  text-align: left;
+}
+.home-direita h3 {
+  font-size: 18px;
+  text-align: left;
+}
+.home-direita p {
+  color: #050315;
+  font-size: 18px;
+  text-align: left;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.63px;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+.home-direita .btn,
+.home-direita button {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  align-self: flex-start;
+}
 .hero button {
   padding: 10px 32px;
   background-color: #2F27CE;
@@ -139,12 +168,9 @@ section {
   font-size: 13px;
   font-weight: 700;
   max-width: fit-content;
-
 }
 
-
-
-
+/* PORTFOLIO */
 .portfolio {
   background-color: #342db6;
   color: #FBFBFC;
@@ -152,24 +178,25 @@ section {
   padding-left: 100px;
   padding-right:100px;
 }
-  .portfolio h2 {
-    text-align: center;
-    margin-bottom: 1.4rem;
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: 2.1px;
-  }
-  .portfolio p {
-    text-align: center;
-    margin-bottom: 4rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.6px;
-  }
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 1.4rem;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+}
+.portfolio p {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
 
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -177,7 +204,6 @@ section {
   padding: 0 1rem;
   justify-content: center;
 }
-
 .card {
   background: #FBFBFC;
   color: black;
@@ -224,40 +250,35 @@ section {
   line-height: 160%;
   letter-spacing: 0.14px;
 }
+.seta-port{
+  display: none;
+}
 
-
-
-
+/* SKILLS */
 .skills {
   background-color: #FBFBFE;
 }
-
 .skills h2 {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-
 .skills ul {
   max-width: 600px;
   margin: auto;
   list-style: none;
 }
-
 .skills li {
   margin: 1rem 0;
 }
-
 .skills progress {
   width: 100%;
 }
-
 .progressoDiv {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 .progressoValor {
   font-size: 1rem;
   font-weight: bold;
@@ -266,13 +287,12 @@ section {
   text-align: right;
 }
 
-
+/* CONTATO */
 .contato {
   background-color: #eaeaff;
   display: grid;
   align-items: center;
 }
-
 .contato h2 {
   text-align: center;
   margin-bottom: 1.6rem;
@@ -281,9 +301,8 @@ section {
 .contato h3 {
   display: flex;
   justify-content: center;
-  font-size: 14px;
-  margin-bottom: 1.8rem;
   font-size: 1.2rem;
+  margin-bottom: 1.8rem;
 }
 .contato form {
   max-width: 500px;
@@ -293,14 +312,12 @@ section {
   gap: 1rem;
   margin-bottom: 1rem;
 }
-
 input, textarea {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
 .contato button {
   margin-top: 4px;
   padding: 0.6rem 1.2rem;
@@ -322,20 +339,16 @@ input, textarea {
   justify-content: space-between;
   align-items: stretch;
 }
-
 .contato form,
 .mapa-container {
   flex: 1 1 50%;
   max-width: 50%;
   min-width: 400px;
-  
   flex-direction: column;
   justify-content: stretch;
 }
 
-
-
-
+/* FOOTER */
 footer {
   background-color: #000000;
   color: #FBFBFE;
@@ -358,60 +371,43 @@ footer p{
   letter-spacing: 2px;
 }
 
+/* BUTTON HOVER */
 button:hover {
   background-color: #1a1a8c;
   color: #FBFBFE;
   transition: 0.4s ease;
 }
 
+/* MEDIA QUERIES */
+
+/* NAV E LOGO EM TELAS PEQUENAS */
 @media (max-width: 600px) {
   nav {
     flex-direction: row;
     align-items: center;
     height: 64px;
     padding: 1rem 0;
-    position: relative;
+    position: fixed;
   }
-
   .logo {
     display: flex;
-    margin-bottom: 0.5rem;
     align-items: center;
     margin-bottom: 0;
     margin-left: 1rem;
+    height: 64px;
   }
-
   .logo img {
     max-height: 48px;
     max-width: 130px;
     margin: 0;
     display: block;
+    vertical-align: middle;
   }
-
-}
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 1rem;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #FBFBFC;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
   nav ul {
     display: none;
     flex-direction: column;
@@ -428,11 +424,9 @@ button:hover {
   nav ul.active {
     display: flex;
   }
-  .menu-toggle {
-    display: flex;
-  }
+}
 
-
+/* HERO E HOME EM TELAS PEQUENAS */
 @media (max-width: 700px) {
   .hero {
     display: flex;
@@ -456,53 +450,102 @@ button:hover {
   .home-direita {
     padding-right: 0; 
   }
-  .home-direita h1,
-  .home-direita h2,
-  .home-direita h3,
-  .home-direita p {
+  .home-direita h1 {
+    font-size: 30px;
     text-align: center;
   }
-  .home-direita h1 {
-    font-size: 2rem;
-  }
   .home-direita h2 {
-    font-size: 1.2rem;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
   }
   .home-direita h3 {
-    font-size: 1rem;
+    font-size: 16px;
+    text-align: center;
   }
   .home-direita p {
-    font-size: 15px;
+    font-size: 13px;
+    text-align: center;
   }
-.home-direita .btn,
+  .home-direita .btn,
   .home-direita button {
     display: block;
     margin-left: auto;
     margin-right: auto;
     align-self: center;
   }
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-  }
 }
+
+/* Cards em duas colunas até 960px */
 @media (max-width: 960px) {
   .cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 }
 
+/* Cards em carrossel horizontal até 600px */
 @media (max-width: 600px) {
+  .portfolio {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .cards {
-    grid-template-columns: 1fr;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .card {  
+    max-width: 65vw;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+  .portfolio-setas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .seta-port {
+    
+    background: #eaeaff;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    width: 36px;
+    height: 48px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background 0.2s;
+  }
+  .seta-port:active {
+    background: #1a1a8c;
   }
 }
 
+/* CONTATO EM TELAS PEQUENAS */
 @media (max-width: 900px) {
   .contato-conteudo {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
   }
   .contato {
     display: flex;
@@ -512,18 +555,6 @@ button:hover {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .contato-conteudo {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .contato form,
-  .mapa-container {
-    max-width: 100%;
-    min-width: unset;
-    width: 100%;
-  }
-
   .contato form,
   .mapa-container {
     max-width: 100%;
@@ -531,7 +562,6 @@ button:hover {
     width: 100%;
     height: auto;
   }
-
   .mapa-container {
     aspect-ratio: 1/1;
     min-height: 300px;

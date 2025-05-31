@@ -13,6 +13,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelector('.cards');
+  const btnLeft = document.getElementById('scrollLeft');
+  const btnRight = document.getElementById('scrollRight');
+
+  function isMobile() {
+    return window.innerWidth <= 600;
+  }
+
+  if (cards && btnLeft && btnRight) {
+    btnLeft.addEventListener('click', function () {
+      if (isMobile()) {
+        cards.scrollBy({ left: -cards.offsetWidth * 0.8, behavior: 'smooth' });
+      }
+    });
+    btnRight.addEventListener('click', function () {
+      if (isMobile()) {
+        cards.scrollBy({ left: cards.offsetWidth * 0.8, behavior: 'smooth' });
+      }
+    });
+  }
+});
+
 const form = document.querySelector('.contato form');
   if (form) {
     form.addEventListener('submit', function (e) {
