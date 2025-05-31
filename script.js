@@ -14,23 +14,50 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const cards = document.querySelector('.cards');
+  const cardsContainer = document.querySelector('.cards');
+  const cards = cardsContainer ? Array.from(cardsContainer.querySelectorAll('.card')) : [];
   const btnLeft = document.getElementById('scrollLeft');
   const btnRight = document.getElementById('scrollRight');
+  let current = 0;
 
   function isMobile() {
     return window.innerWidth <= 600;
   }
 
-  if (cards && btnLeft && btnRight) {
-    btnLeft.addEventListener('click', function () {
-      if (isMobile()) {
-        cards.scrollBy({ left: -cards.offsetWidth * 0.8, behavior: 'smooth' });
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      if (i === index) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
       }
     });
-    btnRight.addEventListener('click', function () {
+  }
+
+  function nextCard() {
+    if (!isMobile()) return;
+    current = (current + 1) % cards.length;
+    showCard(current);
+  }
+
+  function prevCard() {
+    if (!isMobile()) return;
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
+  }
+
+  if (cards.length && btnLeft && btnRight) {
+    showCard(current);
+
+    btnLeft.addEventListener('click', prevCard);
+    btnRight.addEventListener('click', nextCard);
+
+    window.addEventListener('resize', () => {
       if (isMobile()) {
-        cards.scrollBy({ left: cards.offsetWidth * 0.8, behavior: 'smooth' });
+        showCard(current);
+      } else {
+        // Em telas grandes, mostra todos os cards
+        cards.forEach(card => card.classList.remove('active'));
       }
     });
   }
